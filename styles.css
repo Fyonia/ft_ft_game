@@ -730,3 +730,10 @@
     .cat-header-name { font-size: 0.7rem; }
     .point-cell { font-size: 0.9rem; }
   }
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+  padding: 20px;
+}
