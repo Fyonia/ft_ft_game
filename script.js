@@ -1242,6 +1242,9 @@ const state = {
   soundOn: true
 };
 
+// Tracks recently-used questions per category+difficulty to avoid repeats across games in same session
+const recentlyUsed = {};
+
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 const showScreen = (id) => {
@@ -1296,22 +1299,60 @@ function updateDisabledTiles() {
   });
 }
 
+// Crypto-strength shuffle for better randomness — different per session/device
 function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    let j;
+    if (window.crypto && window.crypto.getRandomValues) {
+      const rand = new Uint32Array(1);
+      window.crypto.getRandomValues(rand);
+      j = rand[0] % (i + 1);
+    } else {
+      j = Math.floor(Math.random() * (i + 1));
+    }
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return arr;
+  return a;
+}
+
+// Pick random questions while avoiding ones recently used in the same browser session
+function getRandomQuestions(catId, difficulty, count) {
+  const pool = CATEGORIES[catId].questions[difficulty];
+  const key = catId + '_' + difficulty;
+  if (!recentlyUsed[key]) recentlyUsed[key] = [];
+
+  // Filter out recently used questions
+  let available = pool.filter(q => !recentlyUsed[key].includes(q.q));
+
+  // If not enough remain, reset the history for this category+difficulty
+  if (available.length < count) {
+    recentlyUsed[key] = [];
+    available = [...pool];
+  }
+
+  // Shuffle and pick
+  const picked = shuffle(available).slice(0, count);
+
+  // Remember these so next game avoids them
+  picked.forEach(q => recentlyUsed[key].push(q.q));
+
+  // Keep memory bounded — only remember ~60% of the pool
+  const maxRemember = Math.floor(pool.length * 0.6);
+  if (recentlyUsed[key].length > maxRemember) {
+    recentlyUsed[key] = recentlyUsed[key].slice(-maxRemember);
+  }
+
+  return picked;
 }
 
 function buildBoard() {
   state.board = {};
   state.selectedCategories.forEach(catId => {
-    const cat = CATEGORIES[catId];
     state.board[catId] = {
-      easy:   shuffle([...cat.questions.easy]).slice(0, 2).map(q => ({ ...q, used: false })),
-      medium: shuffle([...cat.questions.medium]).slice(0, 2).map(q => ({ ...q, used: false })),
-      hard:   shuffle([...cat.questions.hard]).slice(0, 2).map(q => ({ ...q, used: false }))
+      easy:   getRandomQuestions(catId, 'easy', 2).map(q => ({ ...q, used: false })),
+      medium: getRandomQuestions(catId, 'medium', 2).map(q => ({ ...q, used: false })),
+      hard:   getRandomQuestions(catId, 'hard', 2).map(q => ({ ...q, used: false }))
     };
   });
 }
