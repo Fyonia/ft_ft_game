@@ -116,6 +116,18 @@
       </header>
       <div class="q-body">
         <p class="q-text" id="q-text">السؤال يظهر هنا</p>
+
+        <!-- مشغل الصوت (يظهر فقط للأسئلة الصوتية) -->
+        <div class="q-audio-wrap" id="q-audio-wrap" style="display:none">
+          <div class="q-audio-icon">🎧</div>
+          <audio id="q-audio" controls preload="metadata" controlsList="nodownload"></audio>
+        </div>
+
+        <!-- صورة السؤال (تظهر فقط للأسئلة المصورة) -->
+        <div class="q-image-wrap" id="q-image-wrap" style="display:none">
+          <img id="q-image" src="" alt="">
+        </div>
+
         <div class="q-answer-reveal" id="q-answer-reveal">
           <div class="q-answer-label">الإجابة الصحيحة</div>
           <div class="q-answer-text" id="q-answer-text"></div>
