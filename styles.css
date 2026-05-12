@@ -926,7 +926,7 @@
 .cat-group-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 10px;
+  gap: 15px;
   padding: 0 14px;
   max-height: 0;
   overflow: hidden;
