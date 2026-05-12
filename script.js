@@ -553,7 +553,7 @@ const CATEGORIES = {
       { q: 'ما الدولة التي تملك أكبر احتياطي نفط مثبت في العالم؟', a: 'فنزويلا' },
       { q: 'ما العاصمة الأعلى ارتفاعًا عن سطح البحر؟', a: 'لاباز' },
       { q: 'ما اسم الخط الذي يحدد تغير التاريخ؟', a: 'خط التاريخ الدولي' },
-      { q: 'ما الدولة الأوروبية التي تضم أكبر عدد من البراكين النشطة؟', a: 'آيسلندا' },
+      { q: 'ما الدولة الأوروبية التي تضم أكبر عدد من البراكين النشطة؟', a: 'إيطاليا' },
       { q: 'ما أكبر أرخبيل في العالم؟', a: 'إندونيسيا' },
       { q: 'ما اسم المضيق الذي يربط الخليج العربي بخليج عمان؟', a: 'مضيق هرمز' },
       { q: 'ما الدولة التي تقع فيها مدينة تشيرنوبل؟', a: 'أوكرانيا' },
@@ -1229,26 +1229,28 @@ const CATEGORIES = {
 
   // ==================== الفئات الجديدة (New Categories) ====================
   // ملاحظة: استبدل الأسئلة الـ placeholder بأسئلة حقيقية
-  // للفئات الصوتية: استخدم الحقل audio: 'audio/folder/filename.mp3' أو رابط أونلاين
+  // للفئات الصوتية: ضع رابط أونلاين أو مسار محلي في حقل audio (مثل: 'audio/basem/file.mp3')
+  // للفئات المصوّرة: ضع رابط أونلاين أو مسار محلي في حقل image (مثل: 'images/picture/file.jpg')
+  // الحقول الفاضية '' لن تعرض أي مشغّل أو صورة حتى تعبّيها
 
   basem: {
     id: 'basem', name: 'باسم الكربلائي', icon: '🎤',
     questions: {
       easy: [
-        // مثال: ضع ملف الصوت في audio/basem/ ثم اكتب اسم الملف
-        { q: 'استمع للقصيدة، ما اسمها؟', a: 'اكتب الإجابة هنا', audio: 'audio/basem/easy_1.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'اكتب الإجابة هنا', audio: 'audio/basem/easy_2.mp3' },
-        { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: 'audio/basem/easy_3.mp3' }
+        // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
+        { q: 'استمع للقصيدة، ما اسمها؟', a: '', audio: '' },
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
+        { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
       ],
       medium: [
-        { q: 'استمع للنعي وحدد المناسبة', a: 'اكتب الإجابة هنا', audio: 'audio/basem/medium_1.mp3' },
-        { q: 'في أي سنة قيلت هذه القصيدة؟', a: 'اكتب الإجابة هنا', audio: 'audio/basem/medium_2.mp3' },
-        { q: 'استمع وحدد اسم الشاعر', a: 'اكتب الإجابة هنا', audio: 'audio/basem/medium_3.mp3' }
+        { q: 'استمع للنعي وحدد المناسبة', a: '', audio: '' },
+        { q: 'في أي سنة قيلت هذه القصيدة؟', a: '', audio: '' },
+        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
       ],
       hard: [
-        { q: 'استمع وحدد اسم القصيدة كاملاً', a: 'اكتب الإجابة هنا', audio: 'audio/basem/hard_1.mp3' },
-        { q: 'استمع وأكمل البيت التالي', a: 'اكتب الإجابة هنا', audio: 'audio/basem/hard_2.mp3' },
-        { q: 'استمع وحدد اللحن', a: 'اكتب الإجابة هنا', audio: 'audio/basem/hard_3.mp3' }
+        { q: 'استمع وحدد اسم القصيدة كاملاً', a: '', audio: '' },
+        { q: 'استمع وأكمل البيت التالي', a: '', audio: '' },
+        { q: 'استمع وحدد اللحن', a: '', audio: '' }
       ]
     }
   },
@@ -1267,7 +1269,7 @@ const CATEGORIES = {
         { q: 'ما الحرف الذي يأتي بعد الـ "ص" في الأبجدية؟', a: 'الضاد' }
       ],
       hard: [
-        { q: 'ما هي الحروف الهجائية التي ليس لها نقاط؟', a: 'اكتب الإجابة هنا' },
+        { q: 'ما هي الحروف الهجائية التي ليس لها نقاط؟', a: '' },
         { q: 'ما اسم الحرف الذي اشتُهرت به اللغة العربية ويسمى لغة الضاد؟', a: 'الضاد' },
         { q: 'كم حرفًا من حروف العلة في اللغة العربية؟', a: '3 (ا، و، ي)' }
       ]
@@ -1278,19 +1280,20 @@ const CATEGORIES = {
     id: 'rwadeed', name: 'رواديد', icon: '🎙️',
     questions: {
       easy: [
-        { q: 'استمع للرادود، من هو؟', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/easy_1.mp3' },
-        { q: 'استمع وحدد اسم اللطمية', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/easy_2.mp3' },
-        { q: 'من قائل هذه اللطمية؟', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/easy_3.mp3' }
+        // ضع ملف الصوت في audio/rwadeed/ أو استخدم رابط أونلاين
+        { q: 'استمع للرادود، من هو؟', a: '', audio: '' },
+        { q: 'استمع وحدد اسم اللطمية', a: '', audio: '' },
+        { q: 'من قائل هذه اللطمية؟', a: '', audio: '' }
       ],
       medium: [
-        { q: 'استمع للرادود وحدد جنسيته', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/medium_1.mp3' },
-        { q: 'في أي مناسبة قيلت هذه اللطمية؟', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/medium_2.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/medium_3.mp3' }
+        { q: 'استمع للرادود وحدد جنسيته', a: '', audio: '' },
+        { q: 'في أي مناسبة قيلت هذه اللطمية؟', a: '', audio: '' },
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' }
       ],
       hard: [
-        { q: 'استمع وحدد اسم اللطمية كاملاً مع الرادود', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/hard_1.mp3' },
-        { q: 'استمع وحدد اسم الشاعر', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/hard_2.mp3' },
-        { q: 'استمع وحدد سنة الإلقاء', a: 'اكتب الإجابة هنا', audio: 'audio/rwadeed/hard_3.mp3' }
+        { q: 'استمع وحدد اسم اللطمية كاملاً مع الرادود', a: '', audio: '' },
+        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' },
+        { q: 'استمع وحدد سنة الإلقاء', a: '', audio: '' }
       ]
     }
   },
@@ -1383,19 +1386,20 @@ const CATEGORIES = {
     id: 'taha', name: 'طه', icon: '🌙',
     questions: {
       easy: [
-        { q: 'استمع، من قائل هذه القصيدة؟', a: 'طه', audio: 'audio/taha/easy_1.mp3' },
-        { q: 'استمع وحدد اسم القصيدة', a: 'اكتب الإجابة هنا', audio: 'audio/taha/easy_2.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'اكتب الإجابة هنا', audio: 'audio/taha/easy_3.mp3' }
+        // ضع ملف الصوت في audio/taha/ أو استخدم رابط أونلاين
+        { q: 'استمع، من قائل هذه القصيدة؟', a: 'طه', audio: '' },
+        { q: 'استمع وحدد اسم القصيدة', a: '', audio: '' },
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' }
       ],
       medium: [
-        { q: 'استمع وحدد المناسبة', a: 'اكتب الإجابة هنا', audio: 'audio/taha/medium_1.mp3' },
-        { q: 'في أي سنة قيلت هذه القصيدة؟', a: 'اكتب الإجابة هنا', audio: 'audio/taha/medium_2.mp3' },
-        { q: 'استمع وحدد اسم الشاعر', a: 'اكتب الإجابة هنا', audio: 'audio/taha/medium_3.mp3' }
+        { q: 'استمع وحدد المناسبة', a: '', audio: '' },
+        { q: 'في أي سنة قيلت هذه القصيدة؟', a: '', audio: '' },
+        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
       ],
       hard: [
-        { q: 'استمع وحدد اسم القصيدة كاملاً', a: 'اكتب الإجابة هنا', audio: 'audio/taha/hard_1.mp3' },
-        { q: 'استمع وحدد اللحن المستخدم', a: 'اكتب الإجابة هنا', audio: 'audio/taha/hard_2.mp3' },
-        { q: 'استمع وأكمل البيت', a: 'اكتب الإجابة هنا', audio: 'audio/taha/hard_3.mp3' }
+        { q: 'استمع وحدد اسم القصيدة كاملاً', a: '', audio: '' },
+        { q: 'استمع وحدد اللحن المستخدم', a: '', audio: '' },
+        { q: 'استمع وأكمل البيت', a: '', audio: '' }
       ]
     }
   },
@@ -1404,19 +1408,20 @@ const CATEGORIES = {
     id: 'nizar', name: 'أناشيد نزار', icon: '🎵',
     questions: {
       easy: [
-        { q: 'استمع، ما اسم هذا النشيد؟', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/easy_1.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/easy_2.mp3' },
-        { q: 'من المنشد؟', a: 'نزار', audio: 'audio/nizar/easy_3.mp3' }
+        // ضع ملف الصوت في audio/nizar/ أو استخدم رابط أونلاين
+        { q: 'استمع، ما اسم هذا النشيد؟', a: '', audio: '' },
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
+        { q: 'من المنشد؟', a: 'نزار', audio: '' }
       ],
       medium: [
-        { q: 'استمع وحدد المناسبة', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/medium_1.mp3' },
-        { q: 'في أي ألبوم هذا النشيد؟', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/medium_2.mp3' },
-        { q: 'استمع وحدد سنة الإصدار', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/medium_3.mp3' }
+        { q: 'استمع وحدد المناسبة', a: '', audio: '' },
+        { q: 'في أي ألبوم هذا النشيد؟', a: '', audio: '' },
+        { q: 'استمع وحدد سنة الإصدار', a: '', audio: '' }
       ],
       hard: [
-        { q: 'استمع وحدد اسم النشيد والشاعر', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/hard_1.mp3' },
-        { q: 'استمع وأكمل المقطع التالي', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/hard_2.mp3' },
-        { q: 'استمع وحدد اللحن', a: 'اكتب الإجابة هنا', audio: 'audio/nizar/hard_3.mp3' }
+        { q: 'استمع وحدد اسم النشيد والشاعر', a: '', audio: '' },
+        { q: 'استمع وأكمل المقطع التالي', a: '', audio: '' },
+        { q: 'استمع وحدد اللحن', a: '', audio: '' }
       ]
     }
   },
@@ -1425,42 +1430,41 @@ const CATEGORIES = {
     id: 'qatifi', name: 'كلمات قطيفية', icon: '🗣️',
     questions: {
       easy: [
-        { q: 'ماذا تعني كلمة "يوهلا" بالقطيفي؟', a: 'اكتب الإجابة هنا' },
+        { q: 'ماذا تعني كلمة "يوهلا" بالقطيفي؟', a: '' },
         { q: 'ماذا تعني كلمة "ششخبارك"؟', a: 'كيف حالك' },
-        { q: 'ماذا تعني كلمة "مَحَدْنا"؟', a: 'اكتب الإجابة هنا' }
+        { q: 'ماذا تعني كلمة "مَحَدْنا"؟', a: '' }
       ],
       medium: [
-        { q: 'ماذا تعني كلمة "يا حليلك"؟', a: 'اكتب الإجابة هنا' },
-        { q: 'ماذا تعني كلمة "تَفَلَّيْت"؟', a: 'اكتب الإجابة هنا' },
-        { q: 'ماذا تعني عبارة "خل عنك"؟', a: 'اكتب الإجابة هنا' }
+        { q: 'ماذا تعني كلمة "يا حليلك"؟', a: '' },
+        { q: 'ماذا تعني كلمة "تَفَلَّيْت"؟', a: '' },
+        { q: 'ماذا تعني عبارة "خل عنك"؟', a: '' }
       ],
       hard: [
-        { q: 'ماذا تعني كلمة "متعنود"؟', a: 'اكتب الإجابة هنا' },
-        { q: 'ما أصل كلمة "دَرْبَوَنْة"؟', a: 'اكتب الإجابة هنا' },
-        { q: 'ماذا تعني عبارة "ما عمت لك"؟', a: 'اكتب الإجابة هنا' }
+        { q: 'ماذا تعني كلمة "متعنود"؟', a: '' },
+        { q: 'ما أصل كلمة "دَرْبَوَنْة"؟', a: '' },
+        { q: 'ماذا تعني عبارة "ما عمت لك"؟', a: '' }
       ]
     }
   },
 
   picture: {
     id: 'picture', name: 'تحدي الصور', icon: '🖼️',
-    // ملاحظة: لو تبي تدعم الصور، نضيف حقل image مشابه لـ audio
-    // مثال: { q: 'احزر هذه الشخصية', a: 'الجواب', image: 'images/q1.jpg' }
     questions: {
       easy: [
-        { q: 'احزر الشخصية من الصورة', a: 'اكتب الإجابة هنا', image: 'images/picture/easy_1.jpg' },
-        { q: 'ما اسم هذا المكان؟', a: 'اكتب الإجابة هنا', image: 'images/picture/easy_2.jpg' },
-        { q: 'احزر الفيلم من المشهد', a: 'اكتب الإجابة هنا', image: 'images/picture/easy_3.jpg' }
+        // ضع الصورة في images/picture/ أو استخدم رابط أونلاين
+        { q: 'احزر الشخصية من الصورة', a: '', image: '' },
+        { q: 'ما اسم هذا المكان؟', a: '', image: '' },
+        { q: 'احزر الفيلم من المشهد', a: '', image: '' }
       ],
       medium: [
-        { q: 'احزر الشخصية التاريخية', a: 'اكتب الإجابة هنا', image: 'images/picture/medium_1.jpg' },
-        { q: 'احزر الأنمي من الصورة', a: 'اكتب الإجابة هنا', image: 'images/picture/medium_2.jpg' },
-        { q: 'ما اسم هذه اللوحة؟', a: 'اكتب الإجابة هنا', image: 'images/picture/medium_3.jpg' }
+        { q: 'احزر الشخصية التاريخية', a: '', image: '' },
+        { q: 'احزر الأنمي من الصورة', a: '', image: '' },
+        { q: 'ما اسم هذه اللوحة؟', a: '', image: '' }
       ],
       hard: [
-        { q: 'احزر الشخصية من ظلها فقط', a: 'اكتب الإجابة هنا', image: 'images/picture/hard_1.jpg' },
-        { q: 'ما اسم هذا المعلم النادر؟', a: 'اكتب الإجابة هنا', image: 'images/picture/hard_2.jpg' },
-        { q: 'احزر اللعبة من اللقطة', a: 'اكتب الإجابة هنا', image: 'images/picture/hard_3.jpg' }
+        { q: 'احزر الشخصية من ظلها فقط', a: '', image: '' },
+        { q: 'ما اسم هذا المعلم النادر؟', a: '', image: '' },
+        { q: 'احزر اللعبة من اللقطة', a: '', image: '' }
       ]
     }
   },
@@ -1532,6 +1536,53 @@ const CATEGORIES = {
 const POINTS_BY_DIFFICULTY = { easy: 200, medium: 400, hard: 600 };
 const TIMER_SECONDS = 30;
 
+// ==================== مجموعات الفئات (Category Groups) ====================
+// تنظيم الفئات في مجموعات منطقية لتسهيل الاختيار
+const CATEGORY_GROUPS = [
+  {
+    id: 'anime_group',
+    name: 'أنمي ومانجا',
+    icon: '🎌',
+    color: '#e74c3c',
+    categories: ['anime', 'attack', 'onepiece', 'conan', 'spacetoon']
+  },
+  {
+    id: 'entertainment',
+    name: 'ترفيه وأفلام',
+    icon: '🎬',
+    color: '#9b59b6',
+    categories: ['movies', 'ghibli', 'disney', 'celebrities']
+  },
+  {
+    id: 'games',
+    name: 'ألعاب',
+    icon: '🎮',
+    color: '#3498db',
+    categories: ['videogames', 'residentevil', 'minecraft']
+  },
+  {
+    id: 'knowledge',
+    name: 'معرفة عامة',
+    icon: '📚',
+    color: '#27ae60',
+    categories: ['geography', 'history', 'science', 'food', 'capitals', 'letters']
+  },
+  {
+    id: 'religious',
+    name: 'ديني',
+    icon: '🕌',
+    color: '#16a085',
+    categories: ['islam', 'prophets', 'basem', 'rwadeed', 'taha', 'nizar']
+  },
+  {
+    id: 'special',
+    name: 'خاص ومميز',
+    icon: '✨',
+    color: '#f39c12',
+    categories: ['qatifi', 'picture']
+  }
+];
+
 const state = {
   team1: { name: 'الفريق الأول', score: 0 },
   team2: { name: 'الفريق الثاني', score: 0 },
@@ -1556,15 +1607,73 @@ const showScreen = (id) => {
 function renderCategories() {
   const grid = $('#categories-grid');
   grid.innerHTML = '';
-  Object.values(CATEGORIES).forEach(cat => {
-    const tile = document.createElement('div');
-    tile.className = 'cat-tile';
-    tile.dataset.catId = cat.id;
-    tile.innerHTML = '<div class="cat-tile-icon">' + cat.icon + '</div>' +
-                     '<div class="cat-tile-name">' + cat.name + '</div>';
-    tile.addEventListener('click', () => toggleCategory(cat.id, tile));
-    grid.appendChild(tile);
+
+  // عرض الفئات مجمّعة حسب المجموعة
+  CATEGORY_GROUPS.forEach((group, groupIdx) => {
+    // إنشاء حاوية المجموعة
+    const groupEl = document.createElement('div');
+    groupEl.className = 'cat-group';
+    groupEl.dataset.groupId = group.id;
+    // أول مجموعتين مفتوحتين افتراضياً، الباقي مغلق
+    if (groupIdx < 2) groupEl.classList.add('expanded');
+    groupEl.style.setProperty('--group-color', group.color);
+
+    // عنوان المجموعة (قابل للضغط للطي/الفتح)
+    const header = document.createElement('div');
+    header.className = 'cat-group-header';
+    header.innerHTML =
+      '<div class="cat-group-title">' +
+        '<span class="cat-group-icon">' + group.icon + '</span>' +
+        '<span class="cat-group-name">' + group.name + '</span>' +
+        '<span class="cat-group-count">(' + group.categories.length + ')</span>' +
+      '</div>' +
+      '<span class="cat-group-toggle">▼</span>';
+    header.addEventListener('click', () => {
+      groupEl.classList.toggle('expanded');
+      Sound.click();
+    });
+    groupEl.appendChild(header);
+
+    // شبكة الفئات داخل المجموعة
+    const groupGrid = document.createElement('div');
+    groupGrid.className = 'cat-group-grid';
+    group.categories.forEach(catId => {
+      const cat = CATEGORIES[catId];
+      if (!cat) return;
+      const tile = document.createElement('div');
+      tile.className = 'cat-tile';
+      tile.dataset.catId = cat.id;
+
+      // التحقق من نوع الوسائط في الفئة (صوت/صورة)
+      const mediaBadge = getMediaBadge(cat);
+
+      tile.innerHTML =
+        '<div class="cat-tile-icon">' + cat.icon + '</div>' +
+        '<div class="cat-tile-name">' + cat.name + '</div>' +
+        mediaBadge;
+      tile.addEventListener('click', () => toggleCategory(cat.id, tile));
+      groupGrid.appendChild(tile);
+    });
+    groupEl.appendChild(groupGrid);
+
+    grid.appendChild(groupEl);
   });
+}
+
+// إرجاع علامة الوسائط (صوت/صورة) لو الفئة فيها هذا النوع من الأسئلة
+function getMediaBadge(cat) {
+  // فحص أول سؤال في كل مستوى لمعرفة نوع الفئة
+  const allQuestions = [
+    ...(cat.questions.easy || []),
+    ...(cat.questions.medium || []),
+    ...(cat.questions.hard || [])
+  ];
+  const hasAudio = allQuestions.some(q => 'audio' in q);
+  const hasImage = allQuestions.some(q => 'image' in q);
+
+  if (hasAudio) return '<div class="cat-tile-badge audio-badge" title="فئة صوتية">🎧</div>';
+  if (hasImage) return '<div class="cat-tile-badge image-badge" title="فئة مصوّرة">🖼️</div>';
+  return '';
 }
 
 function toggleCategory(id, tile) {
