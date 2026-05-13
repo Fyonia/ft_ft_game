@@ -1415,27 +1415,6 @@ const CATEGORIES = {
     }
   },
 
-  qatifi: {
-    id: 'qatifi', name: 'كلمات قطيفية', icon: '🗣️',
-    questions: {
-      easy: [
-        { q: 'ماذا تعني كلمة "يوهلا" بالقطيفي؟', a: '' },
-        { q: 'ماذا تعني كلمة "ششخبارك"؟', a: 'كيف حالك' },
-        { q: 'ماذا تعني كلمة "مَحَدْنا"؟', a: '' }
-      ],
-      medium: [
-        { q: 'ماذا تعني كلمة "يا حليلك"؟', a: '' },
-        { q: 'ماذا تعني كلمة "تَفَلَّيْت"؟', a: '' },
-        { q: 'ماذا تعني عبارة "خل عنك"؟', a: '' }
-      ],
-      hard: [
-        { q: 'ماذا تعني كلمة "متعنود"؟', a: '' },
-        { q: 'ما أصل كلمة "دَرْبَوَنْة"؟', a: '' },
-        { q: 'ماذا تعني عبارة "ما عمت لك"؟', a: '' }
-      ]
-    }
-  },
-
   picture: {
     id: 'picture', name: 'تحدي الصور', icon: '🖼️',
     questions: {
@@ -1523,7 +1502,7 @@ const CATEGORIES = {
 };
 
 const POINTS_BY_DIFFICULTY = { easy: 200, medium: 400, hard: 600 };
-const TIMER_SECONDS = 30;
+const TIMER_SECONDS = 90;
 
 // ==================== مجموعات الفئات (Category Groups) ====================
 // تنظيم الفئات في مجموعات منطقية لتسهيل الاختيار
@@ -1597,17 +1576,15 @@ function renderCategories() {
   const grid = $('#categories-grid');
   grid.innerHTML = '';
 
-  // عرض الفئات مجمّعة حسب المجموعة
   CATEGORY_GROUPS.forEach((group, groupIdx) => {
-    // إنشاء حاوية المجموعة
+  
     const groupEl = document.createElement('div');
     groupEl.className = 'cat-group';
     groupEl.dataset.groupId = group.id;
-    // أول مجموعتين مفتوحتين افتراضياً، الباقي مغلق
+    
     if (groupIdx < 2) groupEl.classList.add('expanded');
     groupEl.style.setProperty('--group-color', group.color);
 
-    // عنوان المجموعة (قابل للضغط للطي/الفتح)
     const header = document.createElement('div');
     header.className = 'cat-group-header';
     header.innerHTML =
@@ -1623,7 +1600,6 @@ function renderCategories() {
     });
     groupEl.appendChild(header);
 
-    // شبكة الفئات داخل المجموعة
     const groupGrid = document.createElement('div');
     groupGrid.className = 'cat-group-grid';
     group.categories.forEach(catId => {
@@ -1633,7 +1609,6 @@ function renderCategories() {
       tile.className = 'cat-tile';
       tile.dataset.catId = cat.id;
 
-      // التحقق من نوع الوسائط في الفئة (صوت/صورة)
       const mediaBadge = getMediaBadge(cat);
 
       tile.innerHTML =
@@ -1721,19 +1696,15 @@ function getRandomQuestions(catId, difficulty, count) {
   const key = catId + '_' + difficulty;
   if (!recentlyUsed[key]) recentlyUsed[key] = [];
 
-  // Filter out recently used questions
   let available = pool.filter(q => !recentlyUsed[key].includes(q.q));
 
-  // If not enough remain, reset the history for this category+difficulty
   if (available.length < count) {
     recentlyUsed[key] = [];
     available = [...pool];
   }
 
-  // Shuffle and pick
   const picked = shuffle(available).slice(0, count);
 
-  // Remember these so next game avoids them
   picked.forEach(q => recentlyUsed[key].push(q.q));
 
   // Keep memory bounded — only remember ~60% of the pool
@@ -1891,7 +1862,7 @@ function startTimer() {
   state.timer.interval = setInterval(() => {
     state.timer.remaining--;
     updateTimerUI();
-    if (state.timer.remaining <= 5 && state.timer.remaining > 0) Sound.tick();
+    if (state.timer.remaining <= 10 && state.timer.remaining > 0) Sound.tick();
     if (state.timer.remaining <= 0) {
       stopTimer();
       stopMedia();
