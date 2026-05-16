@@ -1226,7 +1226,7 @@ const CATEGORIES = {
     questions: {
       easy: [
         // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
-        { q: 'استمع للقصيدة، ما اسمها؟', a: 'دنيا ماترحم', audio: 'C:\Users\Fatimah Mohammed\OneDrive - IMAM ABDULRAHMAN BIN FAISAL UNIVERSITY\Desktop\Web\Project\ft_ft_game\audio\basem\دنيا ماترحم.mp3' },
+        { q: 'استمع للقصيدة، ما اسمها؟', a: 'دنيا ماترحم', audio: 'audio/basem/دنيا ماترحم.mp3' },
         { q: 'استمع وأكمل المقطع', a: 'يسجلني', audio: 'C:\Users\Fatimah Mohammed\OneDrive - IMAM ABDULRAHMAN BIN FAISAL UNIVERSITY\Desktop\Web\Project\ft_ft_game\audio\basem\يسجلني.mp3' },
         { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
       ],
