@@ -119,8 +119,20 @@
 
         <!-- مشغل الصوت (يظهر فقط للأسئلة الصوتية) -->
         <div class="q-audio-wrap" id="q-audio-wrap" style="display:none">
-          <div class="q-audio-icon">🎧</div>
-          <audio id="q-audio" controls preload="metadata" controlsList="nodownload"></audio>
+          <button class="q-audio-btn" id="q-audio-btn" type="button" aria-label="تشغيل الصوت">
+            <span class="ic-play">▶</span>
+            <span class="ic-pause">❚❚</span>
+          </button>
+          <div class="q-audio-body">
+            <div class="q-audio-bars" id="q-audio-bars">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="q-audio-time"><span id="q-audio-cur">0:00</span> / <span id="q-audio-dur">0:00</span></div>
+          </div>
+          <audio id="q-audio" preload="metadata"></audio>
         </div>
 
         <!-- صورة السؤال (تظهر فقط للأسئلة المصورة) -->
