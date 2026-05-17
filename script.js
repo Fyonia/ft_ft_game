@@ -53,6 +53,27 @@ const Sound = (() => {
 })();
 
 const CATEGORIES = {
+  basem: {
+    id: 'basem', name: 'باسم الكربلائي', icon: '🎤',
+    questions: {
+      easy: [
+        // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
+        { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
+      ],
+      medium: [
+        { q: 'استمع للنعي وحدد المناسبة', a: '', audio: '' },
+        { q: 'في أي سنة قيلت هذه القصيدة؟', a: '', audio: '' },
+        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
+      ],
+      hard: [
+        { q: 'ما اسم هذه القصيدة؟', a: 'دقة ساعة الجرح', audio: 'audio/basem/dgt_saat_algrh.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
+        { q: 'استمع وحدد اللحن', a: '', audio: '' }
+      ]
+    }
+  },
   anime: {
     id: 'anime', name: 'أنمي', icon: '🎌',
     questions: {
@@ -1220,28 +1241,6 @@ const CATEGORIES = {
   // للفئات الصوتية: ضع رابط أونلاين أو مسار محلي في حقل audio (مثل: 'audio/basem/file.mp3')
   // للفئات المصوّرة: ضع رابط أونلاين أو مسار محلي في حقل image (مثل: 'images/picture/file.jpg')
   // الحقول الفاضية '' لن تعرض أي مشغّل أو صورة حتى تعبّيها
-
-  basem: {
-    id: 'basem', name: 'باسم الكربلائي', icon: '🎤',
-    questions: {
-      easy: [
-        // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
-        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
-        { q: 'ما اسم هذه القصيدة؟', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
-        { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
-      ],
-      medium: [
-        { q: 'استمع للنعي وحدد المناسبة', a: '', audio: '' },
-        { q: 'في أي سنة قيلت هذه القصيدة؟', a: '', audio: '' },
-        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
-      ],
-      hard: [
-        { q: 'ما اسم هذه القصيدة؟', a: '', audio: 'audio/basem/dgt_saat_algrh.mp3' },
-        { q: 'ما اسم هذه القصيدة؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
-        { q: 'استمع وحدد اللحن', a: '', audio: '' }
-      ]
-    }
-  },
 
   letters: {
     id: 'letters', name: 'حروف', icon: '🔤',
