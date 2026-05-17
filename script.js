@@ -1226,8 +1226,8 @@ const CATEGORIES = {
     questions: {
       easy: [
         // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
-        { q: 'استمع للقصيدة، ما اسمها؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
+        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
         { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
       ],
       medium: [
@@ -1236,8 +1236,8 @@ const CATEGORIES = {
         { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
       ],
       hard: [
-        { q: 'استمع وحدد اسم القصيدة كاملاً', a: '', audio: '' },
-        { q: 'استمع وأكمل البيت التالي', a: '', audio: '' },
+        { q: 'ما اسم هذه القصيدة؟', a: '', audio: 'audio/basem/dgt_saat_algrh.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
         { q: 'استمع وحدد اللحن', a: '', audio: '' }
       ]
     }
