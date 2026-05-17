@@ -1226,8 +1226,8 @@ const CATEGORIES = {
     questions: {
       easy: [
         // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
-        { q: 'استمع للقصيدة، ما اسمها؟', a: 'دنيا ماترحم', audio: 'audio/basem/دنيا ماترحم.mp3' },
-        { q: 'استمع وأكمل المقطع', a: 'يسجلني', audio: 'audio/basem/يسجلني.mp3' },
+        { q: 'استمع للقصيدة، ما اسمها؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
+        { q: 'استمع وأكمل المقطع', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
         { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
       ],
       medium: [
@@ -1900,12 +1900,14 @@ function setupMedia(qData) {
   audio.pause();
   audio.currentTime = 0;
   audio.src = '';
+  audioWrap.classList.remove('playing');
 
   // لو السؤال فيه صوت
   if (qData.audio) {
     audio.src = qData.audio;
     audioWrap.style.display = 'flex';
     audio.load();
+    setupAudioPlayer();
   }
 
   // لو السؤال فيه صورة
@@ -1917,13 +1919,69 @@ function setupMedia(qData) {
   }
 }
 
+// تنسيق الوقت بصيغة m:ss
+function fmtTime(sec) {
+  if (!isFinite(sec) || sec < 0) sec = 0;
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+// ربط زر التشغيل المخصص بعنصر الصوت (يُربط مرة واحدة فقط)
+function setupAudioPlayer() {
+  const wrap = $('#q-audio-wrap');
+  const btn = $('#q-audio-btn');
+  const audio = $('#q-audio');
+  const curEl = $('#q-audio-cur');
+  const durEl = $('#q-audio-dur');
+
+  // تحديث عرض الوقت
+  curEl.textContent = '0:00';
+  durEl.textContent = '0:00';
+
+  if (btn.dataset.bound === '1') return; // لا نربط الأحداث أكثر من مرة
+  btn.dataset.bound = '1';
+
+  // زر التشغيل / الإيقاف
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  });
+
+  audio.addEventListener('play',  () => wrap.classList.add('playing'));
+  audio.addEventListener('pause', () => wrap.classList.remove('playing'));
+  audio.addEventListener('ended', () => {
+    wrap.classList.remove('playing');
+    audio.currentTime = 0;
+  });
+
+  audio.addEventListener('loadedmetadata', () => {
+    durEl.textContent = fmtTime(audio.duration);
+  });
+  audio.addEventListener('timeupdate', () => {
+    curEl.textContent = fmtTime(audio.currentTime);
+  });
+
+  // لو فشل تحميل ملف الصوت، نظهر رسالة واضحة بدل مشغّل فارغ
+  audio.addEventListener('error', () => {
+    wrap.classList.remove('playing');
+    durEl.textContent = 'خطأ';
+    curEl.textContent = 'تعذّر تحميل الملف';
+  });
+}
+
 // إيقاف أي صوت يشتغل (يُستدعى عند الانتقال من شاشة السؤال)
 function stopMedia() {
   const audio = $('#q-audio');
+  const wrap = $('#q-audio-wrap');
   if (audio) {
     audio.pause();
     audio.currentTime = 0;
   }
+  if (wrap) wrap.classList.remove('playing');
 }
 
 function startTimer() {
