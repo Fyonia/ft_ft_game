@@ -58,19 +58,31 @@ const CATEGORIES = {
     questions: {
       easy: [
         // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
-        { q: 'استمع وأكمل المقطع', a: '', audio: '' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'زينب لفت', audio: 'audio/basem/Zainab_lefit (mp3cut.net).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
-        { q: 'من قائل هذه القصيدة؟', a: 'باسم الكربلائي', audio: '' }
+        { q: 'ما اسم هذه القصيدة؟', a: 'اوتار التكبير', audio: 'audio/basem/autar_altakber.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'براءة عشق', audio: 'audio/basem/baraat_ashg.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'دنيا', audio: 'audio/basem/dnya.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'خطار إجاني', audio: 'audio/basem/khtar_ijany.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'لاترد مات الورد', audio: 'audio/basem/la_trd_mat_al_ward.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'ما حسبت هالكثر', audio: 'audio/basem/ma_hasabt_halkuthur.mp3' }
       ],
       medium: [
-        { q: 'استمع للنعي وحدد المناسبة', a: '', audio: '' },
-        { q: 'في أي سنة قيلت هذه القصيدة؟', a: '', audio: '' },
-        { q: 'استمع وحدد اسم الشاعر', a: '', audio: '' }
+        { q: 'ما اسم هذه القصيدة؟', a: 'عتابي يخوتي', audio: 'audio/basem/Etabi_ya_ikhoti.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'حي على العزاء', audio: 'audio/basem/haia_ala_al_azaa.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'جداه', audio: 'audio/basem/jdah(400).mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'جينا مشاية', audio: 'audio/basem/jina_mashaia.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'قارورة', audio: 'audio/basem/ya_garoura.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'يا نايم الليل', audio: 'audio/basem/ya_naim_al_layl.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'ياطير الصاف', audio: 'audio/basem/ya_tair_al_saf.mp3' }
       ],
       hard: [
         { q: 'ما اسم هذه القصيدة؟', a: 'دقة ساعة الجرح', audio: 'audio/basem/dgt_saat_algrh.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
-        { q: 'استمع وحدد اللحن', a: '', audio: '' }
+        { q: 'ما اسم هذه القصيدة؟', a: 'بروحي', audio: 'audio/basem/birohy.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'هذه الحكاية', audio: 'audio/basem/hdhh_al_hikaiat.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'مرت سنة ونص', audio: 'audio/basem/mrt_sanah_w_ns.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'شلون اصبر على الآه', audio: 'audio/basem/shlon_asber_ala_al_ah.mp3' }
       ]
     }
   },
