@@ -70,7 +70,6 @@ const CATEGORIES = {
       ],
       medium: [
         { q: 'ما اسم هذه القصيدة؟', a: 'عتابي يخوتي', audio: 'audio/basem/Etabi_ya_ikhoti.mp3' },
-        { q: 'ما اسم هذه القصيدة؟', a: 'حي على العزاء', audio: 'audio/basem/haia_ala_al_azaa.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'جداه', audio: 'audio/basem/jdah(400).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'جينا مشاية', audio: 'audio/basem/jina_mashaia.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'قارورة', audio: 'audio/basem/ya_garoura.mp3' },
@@ -80,6 +79,7 @@ const CATEGORIES = {
       hard: [
         { q: 'ما اسم هذه القصيدة؟', a: 'دقة ساعة الجرح', audio: 'audio/basem/dgt_saat_algrh.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'دنيا ماترحم', audio: 'audio/basem/donya-ma-tarham.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'حي على العزاء', audio: 'audio/basem/haia_ala_al_azaa.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'بروحي', audio: 'audio/basem/birohy.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'هذه الحكاية', audio: 'audio/basem/hdhh_al_hikaiat.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'مرت سنة ونص', audio: 'audio/basem/mrt_sanah_w_ns.mp3' },
