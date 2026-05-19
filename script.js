@@ -63,6 +63,7 @@ const CATEGORIES = {
         { q: 'ما اسم هذه القصيدة؟', a: 'اوتار التكبير', audio: 'audio/basem/autar_altakber.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'براءة عشق', audio: 'audio/basem/baraat_ashg.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'دنيا', audio: 'audio/basem/dnya.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'حورية أنسية', audio: 'audio/basem/حوريه انسيه (mp3cut.net).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'تزوروني', audio: 'audio/basem/tizorony.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'خطار إجاني', audio: 'audio/basem/khtar_ijany.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'لاترد مات الورد', audio: 'audio/basem/la_trd_mat_al_ward.mp3' },
@@ -71,6 +72,9 @@ const CATEGORIES = {
       medium: [
         { q: 'ما اسم هذه القصيدة؟', a: 'عتابي يخوتي', audio: 'audio/basem/Etabi_ya_ikhoti.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'جداه', audio: 'audio/basem/jdah(400).mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'صلاوات', audio: 'صلوات صلوات على الإمام المنتظر باسم الكربلائي مولد الإمام المهدي المنتظر (عج) (mp3cut.net).mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'قلبي نقش', audio: 'audio/basem/قلبي نقش 14 باسم الكربلائي النسخه الاصلية (mp3cut.net).mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'ها يمهدي', audio: 'audio/basem/ها يمهدي _ الرادود باسم الكربلائي-trim.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'جينا مشاية', audio: 'audio/basem/jina_mashaia.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'قارورة', audio: 'audio/basem/ya_garoura.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'يا نايم الليل', audio: 'audio/basem/ya_naim_al_layl.mp3' },
