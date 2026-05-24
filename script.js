@@ -78,7 +78,7 @@ const CATEGORIES = {
         { q: 'ما اسم هذه القصيدة؟', a: 'جينا مشاية', audio: 'audio/basem/jina_mashaia.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'قارورة', audio: 'audio/basem/ya_garoura.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'يا نايم الليل', audio: 'audio/basem/ya_naim_al_layl.mp3' },
-        { q: 'ما اسم هذه القصيدة؟', a: 'ياطير الصاف', audio: 'audio/basem/ya_tair_al_saf.mp3' }
+        { q: 'ما اسم هذه القصيدة؟', a: 'ياطير الصاف', audio: 'audio/basem/ya_tair_al_saf (mp3cut.net).mp3' }
       ],
       hard: [
         { q: 'ما اسم هذه القصيدة؟', a: 'دقة ساعة الجرح', audio: 'audio/basem/dgt_saat_algrh.mp3' },
