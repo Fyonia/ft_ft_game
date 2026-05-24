@@ -91,6 +91,37 @@ const CATEGORIES = {
       ]
     }
   },
+  atwar: {
+    id: 'atwar', name: 'أطوار القراءة', icon: '🎤',
+    questions: {
+      easy: [
+        { q: 'ماذا يسمى هذا الطور؟', a: 'الطور الهجري', audio: 'audio/Atwar/الطور الهجري 200.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'بحراني', audio: 'audio/Atwar/بحراني 200.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'قطيفي', audio: 'audio/Atwar/قطيفي 200.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'عاشوري', audio: 'audio/Atwar/عاشوري 200.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور الزفة', audio: 'audio/Atwar/طور الزفة 200.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور ملا عبدالزهرة الكعبي', audio: 'audio/Atwar/طور ملا عبدالزهرة الكعبي 200.mp3' }
+      ],
+      medium: [
+        { q: 'ماذا يسمى هذا الطور؟', a: 'الشيالي', audio: 'audio/Atwar/الشيالي 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'تخميس', audio: 'audio/Atwar/تخميس 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'تغريد حزين', audio: 'audio/Atwar/تغريد حزين 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'حدي', audio: 'audio/Atwar/حدي 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'ملائي', audio: 'audio/Atwar/ملائي 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'شجاعة', audio: 'audio/Atwar/شجاعة 400.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور الجنازي الاحسائي', audio: 'audio/Atwar/طور الجنازي الاحسائي 400.mp3' }
+      ],
+      hard: [
+        { q: 'ماذا يسمى هذا الطور؟', a: 'النصاري', audio: 'audio/Atwar/النصاري 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'نويني', audio: 'audio/Atwar/نويني 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'بيات', audio: 'audio/Atwar/بيات 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور ملا عبدالعزيز العالي', audio: 'audio/Atwar/طور ملا عبدالعزيز العالي 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'جنازي نسائي', audio: 'audio/Atwar/جنازي نسائي 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور ملا حسن بمبي', audio: 'audio/Atwar/طور ملا حسن بمبي 600.mp3' },
+        { q: 'ماذا يسمى هذا الطور؟', a: 'طور ملا طاهر البحراني', audio: 'audio/Atwar/طور ملا طاهر البحراني 600.mpeg' }
+      ]
+    }
+  },
   anime: {
     id: 'anime', name: 'أنمي', icon: '🎌',
     questions: {
@@ -1627,7 +1658,7 @@ const CATEGORY_GROUPS = [
     name: 'ديني',
     icon: '🕌',
     color: '#16a085',
-    categories: ['islam', 'prophets', 'basem', 'rwadeed', 'taha', 'nizar']
+    categories: ['islam', 'prophets', 'basem', 'atwar', 'rwadeed', 'taha', 'nizar']
   },
   {
     id: 'special',
