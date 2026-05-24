@@ -1665,7 +1665,7 @@ const CATEGORY_GROUPS = [
     name: 'خاص ومميز',
     icon: '✨',
     color: '#f39c12',
-    categories: ['qatifi', 'picture']
+    categories: ['picture']
   }
 ];
 
