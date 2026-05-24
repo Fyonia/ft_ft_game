@@ -57,7 +57,6 @@ const CATEGORIES = {
     id: 'basem', name: 'باسم الكربلائي', icon: '🎤',
     questions: {
       easy: [
-        // ضع ملف الصوت في audio/basem/ أو استخدم رابط أونلاين
         { q: 'ما اسم هذه القصيدة؟', a: 'زينب لفت', audio: 'audio/basem/Zainab_lefit (mp3cut.net).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'يسجلني', audio: 'audio/basem/yasjelni.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'اوتار التكبير', audio: 'audio/basem/autar_altakber.mp3' },
@@ -65,6 +64,7 @@ const CATEGORIES = {
         { q: 'ما اسم هذه القصيدة؟', a: 'دنيا', audio: 'audio/basem/dnya.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'حورية أنسية', audio: 'audio/basem/حوريه انسيه (mp3cut.net).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'تزوروني', audio: 'audio/basem/tizorony.mp3' },
+        { q: 'ما اسم هذه القصيدة؟', a: 'روحي', audio: 'audio/basem/باسم الكربلائي (mp3cut.net).mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'خطار إجاني', audio: 'audio/basem/khtar_ijany.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'لاترد مات الورد', audio: 'audio/basem/la_trd_mat_al_ward.mp3' },
         { q: 'ما اسم هذه القصيدة؟', a: 'ما حسبت هالكثر', audio: 'audio/basem/ma_hasabt_halkuthur.mp3' }
