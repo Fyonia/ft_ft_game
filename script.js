@@ -113,24 +113,46 @@ const CATEGORIES = {
     ]
   }
 },
-  picture: {
+picture: {
     id: 'picture', name: 'تحدي الصور', icon: '🖼️',
     questions: {
       easy: [
-        // ضع الصورة في images/picture/ أو استخدم رابط أونلاين
-        { q: 'احزر الشخصية من الصورة', a: '', image: '' },
-        { q: 'ما اسم هذا المكان؟', a: '', image: '' },
-        { q: 'احزر الفيلم من المشهد', a: '', image: '' }
+        { q: '', a: 'البرتقال', image: 'images/photo_challenge/البرتقال.jpg' },
+        { q: '', a: 'ماتشا', image: 'images/photo_challenge/ماتشا.jpg' },
+        { q: '', a: 'سكراب', image: 'images/photo_challenge/سكراب.png' },
+        { q: '', a: 'ماوكلي', image: 'images/photo_challenge/ماوكلي.png' },
+        { q: '', a: 'ماليزيا', image: 'images/photo_challenge/ماليزيا.png' },
+        { q: '', a: 'سنور', image: 'images/photo_challenge/سنور.png' },
+        { q: '', a: 'صحراء', image: 'images/photo_challenge/صحراء.png' },
+        { q: '', a: 'كركم', image: 'images/photo_challenge/كركم.jpeg' },
+        { q: '', a: 'ظهران مول', image: 'images/photo_challenge/ظهران مول.jpeg' },
+        { q: '', a: 'بوقاتي', image: 'images/photo_challenge/بوقاتي.png' }
       ],
       medium: [
-        { q: 'احزر الشخصية التاريخية', a: '', image: '' },
-        { q: 'احزر الأنمي من الصورة', a: '', image: '' },
-        { q: 'ما اسم هذه اللوحة؟', a: '', image: '' }
+        { q: '', a: 'فلفل', image: 'images/photo_challenge/فلفل.png' },
+        { q: '', a: 'سنجاب', image: 'images/photo_challenge/سنجاب.png' },
+        { q: '', a: 'درعة', image: 'images/photo_challenge/درعة.png' },
+        { q: '', a: 'سلمون', image: 'images/photo_challenge/سلمون.png' },
+        { q: '', a: 'فنزويلا', image: 'images/photo_challenge/فنزويلا.png' },
+        { q: '', a: 'راكون', image: 'images/photo_challenge/راكون.png' },
+        { q: '', a: 'كمثرى', image: 'images/photo_challenge/كمثرى.png' },
+        { q: '', a: 'زنجبيل', image: 'images/photo_challenge/زنجبيل.jpeg' },
+        { q: '', a: 'مركبة', image: 'images/photo_challenge/مركبة.png' },
+        { q: '', a: 'هشاشة', image: 'images/photo_challenge/هشاشة.png' },
+        { q: '', a: 'شريحة', image: 'images/photo_challenge/شريحة.png' }
       ],
       hard: [
-        { q: 'احزر الشخصية من ظلها فقط', a: '', image: '' },
-        { q: 'ما اسم هذا المعلم النادر؟', a: '', image: '' },
-        { q: 'احزر اللعبة من اللقطة', a: '', image: '' }
+        { q: '', a: 'مافيا', image: 'images/photo_challenge/مافيا.png' },
+        { q: '', a: 'توشيبا', image: 'images/photo_challenge/توشيبا.png' },
+        { q: '', a: 'جمبري', image: 'images/photo_challenge/جمبري.png' },
+        { q: '', a: 'المعلقات السبع', image: 'images/photo_challenge/المعلقات السبع.png' },
+        { q: '', a: 'سردين', image: 'images/photo_challenge/سردين.png' },
+        { q: '', a: 'سبتمبر', image: 'images/photo_challenge/سبتمبر.jpg' },
+        { q: '', a: 'مخرج', image: 'images/photo_challenge/مخرج.png' },
+        { q: '', a: 'فانيلا', image: 'images/photo_challenge/فانيلا.jpg' },
+        { q: '', a: 'مقلمية', image: 'images/photo_challenge/مقلمية.jpg' },
+        { q: '', a: 'أسطبل', image: 'images/photo_challenge/أسطبل.jpg' },
+        { q: '', a: 'مختل', image: 'images/photo_challenge/مختل.jpg' }
       ]
     }
   },
