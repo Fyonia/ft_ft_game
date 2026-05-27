@@ -117,37 +117,38 @@ picture: {
     id: 'picture', name: 'تحدي الصور', icon: '🖼️',
     questions: {
       easy: [
-        { q: '', a: 'البرتقال', image: 'image/photo_challenge/البرتقال.jpg' },
-        { q: '', a: 'ماتشا', image: 'image/photo_challenge/ماتشا.jpg' },
-        { q: '', a: 'سكراب', image: 'image/photo_challenge/سكراب.png' },
-        { q: '', a: 'ماوكلي', image: 'image/photo_challenge/ماوكلي.png' },
+        { q: '', a: 'فلفل', image: 'image/photo_challenge/فلفل.png' },
         { q: '', a: 'ماليزيا', image: 'image/photo_challenge/ماليزيا.png' },
         { q: '', a: 'سنور', image: 'image/photo_challenge/سنور.png' },
         { q: '', a: 'صحراء', image: 'image/photo_challenge/صحراء.png' },
         { q: '', a: 'كركم', image: 'image/photo_challenge/كركم.jpeg' },
         { q: '', a: 'ظهران مول', image: 'image/photo_challenge/ظهران مول.jpeg' },
-        { q: '', a: 'بوقاتي', image: 'image/photo_challenge/بوقاتي.png' }
-      ],
-      medium: [
-        { q: '', a: 'فلفل', image: 'image/photo_challenge/فلفل.png' },
-        { q: '', a: 'سنجاب', image: 'image/photo_challenge/سنجاب.png' },
-        { q: '', a: 'درعة', image: 'image/photo_challenge/درعة.png' },
         { q: '', a: 'سلمون', image: 'image/photo_challenge/سلمون.png' },
-        { q: '', a: 'فنزويلا', image: 'image/photo_challenge/فنزويلا.png' },
-        { q: '', a: 'راكون', image: 'image/photo_challenge/راكون.png' },
         { q: '', a: 'كمثرى', image: 'image/photo_challenge/كمثرى.png' },
-        { q: '', a: 'زنجبيل', image: 'image/photo_challenge/زنجبيل.jpeg' },
-        { q: '', a: 'مركبة', image: 'image/photo_challenge/مركبة.png' },
         { q: '', a: 'هشاشة', image: 'image/photo_challenge/هشاشة.png' },
         { q: '', a: 'شريحة', image: 'image/photo_challenge/شريحة.png' }
       ],
+      medium: [
+        { q: '', a: 'ماتشا', image: 'image/photo_challenge/ماتشا.jpg' },
+        { q: '', a: 'سكراب', image: 'image/photo_challenge/سكراب.png' },
+        { q: '', a: 'ماوكلي', image: 'image/photo_challenge/ماوكلي.png' },
+        { q: '', a: 'درعة', image: 'image/photo_challenge/درعة.png' },
+        { q: '', a: 'راكون', image: 'image/photo_challenge/راكون.png' },
+        { q: '', a: 'سبتمبر', image: 'image/photo_challenge/سبتمبر.jpg' },
+        { q: '', a: 'فنزويلا', image: 'image/photo_challenge/فنزويلا.png' },
+        { q: '', a: 'زنجبيل', image: 'image/photo_challenge/زنجبيل.jpeg' },
+        { q: '', a: 'مركبة', image: 'image/photo_challenge/مركبة.png' },
+        { q: '', a: 'بوقاتي', image: 'image/photo_challenge/بوقاتي.png' }
+        
+      ],
       hard: [
+        { q: '', a: 'البرتقال', image: 'image/photo_challenge/البرتقال.jpg' },
+        { q: '', a: 'سنجاب', image: 'image/photo_challenge/سنجاب.png' },
         { q: '', a: 'مافيا', image: 'image/photo_challenge/مافيا.png' },
         { q: '', a: 'توشيبا', image: 'image/photo_challenge/توشيبا.png' },
         { q: '', a: 'جمبري', image: 'image/photo_challenge/جمبري.png' },
         { q: '', a: 'المعلقات السبع', image: 'image/photo_challenge/المعلقات السبع.png' },
         { q: '', a: 'سردين', image: 'image/photo_challenge/سردين.png' },
-        { q: '', a: 'سبتمبر', image: 'image/photo_challenge/سبتمبر.jpg' },
         { q: '', a: 'مخرج', image: 'image/photo_challenge/مخرج.png' },
         { q: '', a: 'فانيلا', image: 'image/photo_challenge/فانيلا.jpg' },
         { q: '', a: 'مقلمية', image: 'image/photo_challenge/مقلمية.jpg' },
